@@ -17,6 +17,9 @@ export default function Parent() {
     const sample = () => {
         console.log("sample function called");
     }
+    const receiveFromChild = (data) => {
+        console.log("Received from child:", data);
+    }
     return (
         <div className="Child1">
             <h1>Parent </h1>
@@ -25,7 +28,7 @@ export default function Parent() {
             <button onClick={handleClickButton}>Click Me</button>
             <p>Button clicked {count} times</p>
             <p>Parent component content goes here.</p>
-            <Child1 state={state} />
+            <Child1 state={state} receiveFromChild={receiveFromChild} />
 
         </div>
     );
