@@ -3,13 +3,14 @@ import './App.css';
 // import ParentCall from './praticeCall';
 // import HigerOrderComp from './HigerOrderComp';
 // import Parent from './parent';
+import Debounce from './Debounce';
 
 import Counter from './CounterCus';
 
 function App() {
   return (
     <div className="App">
-      <Counter></Counter>
+      <Debounce></Debounce>
     </div>
   );
 }
