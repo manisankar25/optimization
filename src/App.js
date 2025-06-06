@@ -3,14 +3,14 @@ import './App.css';
 // import ParentCall from './praticeCall';
 // import HigerOrderComp from './HigerOrderComp';
 // import Parent from './parent';
-import Debounce from './Debounce';
-
-import Counter from './CounterCus';
+// import Debounce from './Debounce';
+import LifeCycle from './LifeCycle';
+// import Counter from './CounterCus';
 
 function App() {
   return (
     <div className="App">
-      <Debounce></Debounce>
+      <LifeCycle></LifeCycle>
     </div>
   );
 }
