@@ -1,23 +1,34 @@
 import { use, useState, useEffect } from "react";
 const Debounce = () => {
+    const mock = ['mani', 'sanakar', 'kantipudi']
+
+    const [listUser, setList] = useState(mock)
     const [input, setInput] = useState('');
     const [debounceInput, setDebounceInput] = useState('')
 
+
+
     useEffect(() => {
-        const handler = setTimeout(()=>{
+        const handler = setTimeout(() => {
             setDebounceInput(input)
         }
             , 600)
-            return(()=>clearTimeout(handler))
+        return (() => clearTimeout(handler))
     }, [input])
     useEffect(() => {
-        console.log('ddd',debounceInput)
-        
+        console.log('ddd', debounceInput)
+        let updatedList = mock.filter(
+            (name) => name.includes(debounceInput))
+        setList(updatedList);
+
     }, [debounceInput])
 
     return (<div>
         <h1>Debounce</h1>
         <input type="text" value={input} onChange={(e) => setInput(e.target.value)}></input>
+        {listUser.map((l) => {
+            return (<div>{l}</div>)
+        })}
     </div>)
 }
 export default Debounce;

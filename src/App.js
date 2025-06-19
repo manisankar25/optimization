@@ -4,6 +4,8 @@ import './App.css';
 // import HigerOrderComp from './HigerOrderComp';
 // import Parent from './parent';
 import Debounce from './Debounce';
+import App1 from './components/Tricky';
+import DebouncedFilter from './debounceFilter';
 
 import Counter from './CounterCus';
 
